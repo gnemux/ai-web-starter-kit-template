@@ -1,6 +1,6 @@
 {
   "name": "generated-product",
-  "version": "0.2.0-candidate.4",
+  "version": "0.2.0-candidate.10",
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {
@@ -12,14 +12,18 @@
     "product:init": "node scripts/product-init.mjs",
     "product:verify": "node scripts/verify-product.mjs",
     "test:boundaries": "node scripts/verify-boundaries.mjs",
+    "test:route-boundaries": "node --test scripts/product-route-boundary.test.mjs",
     "test:package-boundaries": "pnpm test:boundaries",
     "test:release": "node scripts/verify-release.mjs",
     "test:release-boundaries": "pnpm test:release",
     "test:security": "node scripts/verify-security.mjs",
     "test:environment": "node --test scripts/env-init.test.mjs",
-    "test:browser": "playwright test",
-    "template:verify": "pnpm product:verify && pnpm test:boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && pnpm --filter @xwlc/web test && node scripts/verify-candidate.mjs",
-    "test": "pnpm product:verify && pnpm test:boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && turbo test"
+    "test:database": "node scripts/test-foundation-db.mjs",
+    "test:browser:foundation": "playwright test tests/foundation",
+    "test:browser:product": "playwright test tests/product --pass-with-no-tests",
+    "test:browser": "pnpm build && pnpm template:verify && pnpm test:browser:foundation && pnpm test:browser:product",
+    "template:verify": "pnpm product:verify && pnpm test:boundaries && pnpm test:route-boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && pnpm --filter @xwlc/web test && node scripts/verify-candidate.mjs",
+    "test": "pnpm product:verify && pnpm test:boundaries && pnpm test:route-boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && turbo test"
   },
   "devDependencies": {
     "@playwright/test": "1.61.1",

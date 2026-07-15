@@ -2,7 +2,10 @@
 
 ## Ownership and boundaries
 
-State which files are product-owned, platform-app adapters, shared packages and provider integrations. A platform module must not import product code.
+State which files are product-owned, platform-app adapters, shared packages and
+provider integrations. Product pages live below the configured
+`apps/web/app/(product)/<workspace-root>`, remain thin and compose
+`apps/web/modules/product`. A platform module must not import product code.
 
 ## Data and security
 

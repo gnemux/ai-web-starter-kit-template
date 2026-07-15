@@ -67,8 +67,9 @@ test("invalid persisted sessions are cleared without hiding provider outages", a
   assert.match(proxy, /"Cache-Control", "private, no-store, max-age=0"/);
 });
 
-test("locale-sensitive form copy is controlled across in-place refreshes", async () => {
+test("neutral workspace is server-rendered and does not simulate saved business work", async () => {
   const workspace = await readFile(new URL("../../product/product-workspace.tsx", import.meta.url), "utf8");
-  assert.match(workspace, /value=\{messages\.previewWorkflowValue\}/);
-  assert.doesNotMatch(workspace, /defaultValue=\{messages\.previewWorkflowValue\}/);
+  assert.match(workspace, /StatePanel/);
+  assert.match(workspace, /resolveCapabilityRegistry/);
+  for (const simulated of ["useState", "ProgressBar", "previewWorkflowValue", "interactionConfirmed"]) assert.doesNotMatch(workspace, new RegExp(simulated));
 });
