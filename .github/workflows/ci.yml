@@ -36,7 +36,7 @@ jobs:
       - name: Rebuild disposable database
         run: supabase start && supabase db reset
       - name: Run pgTAP security and retention tests
-        run: supabase test db
+        run: node scripts/test-foundation-db.mjs
       - name: Stop disposable database
         if: always()
         run: supabase stop --no-backup
@@ -60,7 +60,7 @@ jobs:
         run: pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps chromium
       - name: Start isolated foundation and configure public local values
         run: supabase start && supabase db reset && pnpm env:init -- --supabase-local
-      - name: Run reusable product browser smoke
+      - name: Build and run protected foundation plus optional product browser suites
         run: pnpm test:browser
       - name: Stop disposable database
         if: always()

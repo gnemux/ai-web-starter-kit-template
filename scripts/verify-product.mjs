@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { generatedProductModule, generatedSupabaseConfig, productState, validateProductConfig } from "./product-config.mjs";
+import { generatedProductModule, generatedSupabaseConfig, productState, productWorkspaceSegment, validateProductConfig } from "./product-config.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const config = validateProductConfig(JSON.parse(await readFile(path.join(root, "product.config.json"), "utf8")));
@@ -12,4 +12,5 @@ assert.deepEqual(state, productState(config, version.candidateVersion, state.sta
 assert.ok(["pristine", "derived"].includes(state.status));
 assert.equal(await readFile(path.join(root, "apps/web/config/product.config.ts"), "utf8"), generatedProductModule(config, version.candidateVersion));
 assert.equal(await readFile(path.join(root, "supabase/config.toml"), "utf8"), generatedSupabaseConfig(config));
+await readFile(path.join(root, "apps/web/app/(product)", productWorkspaceSegment(config.paths.product), "page.tsx"));
 console.log(`Product configuration verified: ${state.status} ${state.identity.id}`);

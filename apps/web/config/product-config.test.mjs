@@ -10,11 +10,13 @@ test("generated product config has a stable identity and bounded provider modes"
   assert.ok(["disabled", "external"].includes(productConfig.capabilities.analytics));
   assert.ok(["disabled", "sandbox", "external"].includes(productConfig.capabilities.payment));
   assert.ok(["disabled", "mock", "external"].includes(productConfig.capabilities.ai));
-  assert.deepEqual(productConfig.paths, { home: "/", login: "/login", account: "/account", product: "/product", billing: "/account/billing", usage: "/account/usage" });
+  assert.deepEqual({ home: productConfig.paths.home, login: productConfig.paths.login, account: productConfig.paths.account, billing: productConfig.paths.billing, usage: productConfig.paths.usage }, { home: "/", login: "/login", account: "/account", billing: "/account/billing", usage: "/account/usage" });
+  assert.match(productConfig.paths.product, /^\/[a-z0-9]+(?:-[a-z0-9]+)*$/);
   const generatedRoutes = new Set(Object.values(productConfig.paths));
-  for (const link of [...productConfig.navigation, ...productConfig.footerLinks]) assert.ok(generatedRoutes.has(link.href));
-  assert.ok(generatedRoutes.has(productConfig.home.primaryHref));
-  assert.ok(generatedRoutes.has(productConfig.home.secondaryHref));
+  const allowedRoute = (href) => generatedRoutes.has(href) || href.startsWith(`${productConfig.paths.product}/`);
+  for (const link of [...productConfig.navigation, ...productConfig.footerLinks]) assert.ok(allowedRoute(link.href));
+  assert.ok(allowedRoute(productConfig.home.primaryHref));
+  assert.ok(allowedRoute(productConfig.home.secondaryHref));
   assert.doesNotThrow(() => assertCapabilityConfiguration(productConfig.capabilities, {}));
 });
 

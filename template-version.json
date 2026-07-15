@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "candidateVersion": "0.2.0-candidate.4",
+  "candidateVersion": "0.2.0-candidate.10",
   "source": {
     "repository": "https://github.com/gnemux/ai-web-starter-kit.git",
-    "commit": "bce5ba53acd4cb85c81713fe19a4c86fbaecc431",
-    "committedAt": "2026-07-15T19:07:02+08:00",
+    "commit": "0433c4d39787549bd00a10cd2d22f89252cf9a85",
+    "committedAt": "2026-07-15T23:01:52+08:00",
     "packageVersion": "0.1.1"
   },
   "generator": {
-    "version": "1.0.0",
-    "manifestVersion": "1.0.0",
+    "version": "1.1.0",
+    "manifestVersion": "1.1.0",
     "schemaVersion": 1
   },
   "sourceProjection": {
@@ -38,6 +38,7 @@
   "integrity": {
     "model": "protected-foundation+editable-product+generated-config",
     "editableRoots": [
+      "apps/web/app/(product)/",
       "apps/web/modules/product/",
       "apps/web/public/product/",
       "specs/product/",
@@ -46,11 +47,11 @@
     ]
   },
   "hashes": {
-    "manifest": "8304d37a7a81e9839fc75eb1125fae51b66c17e56671d2223c41c5b17477b889",
-    "blueprint": "90825f67a2ebe1ff67cd5331de831a3e8ee5fd76725420b05193ee3f95effae2",
+    "manifest": "16e00afd0a99171532ce8273a6f7dc0fd8d206c6d94241f3d431f99a2143a680",
+    "blueprint": "283b8e13527ecaaebdc2b439e05aa25c2c212efad16948230e712ee27e1e69bd",
     "config": "840c7bf301401f36d1c56af4d000f384f8e07135a8c7985ee6fa84bdf1a6008d",
     "candidateLock": "64331d7a7f0ebb6a1b8feb8570414740d40899a22bbf5c78ec86e68eccd9c189",
-    "protectedContent": "0ef6988dc14fecd6c8e9920aee6c418052baea518b8e201c4e170d2f8aed1fb5"
+    "protectedContent": "d620c515fed4790e75b4075cfeab9c8d892cdd4fcd368565ceec52846751d79b"
   },
   "toolchain": {
     "node": "22",
@@ -61,25 +62,25 @@
     {
       "name": "@xwlc/core",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/ui",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/platform",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/db",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     }
   ]

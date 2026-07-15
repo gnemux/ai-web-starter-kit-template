@@ -4,15 +4,16 @@ const internalPathPattern = /^\/(?!\/)[^\s\\]*$/;
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const namespacePattern = /^[a-z][a-z0-9_]*$/;
 const hexPattern = /^#[0-9a-fA-F]{6}$/;
-const fixedPaths = {
+const fixedPlatformPaths = {
   home: "/",
   login: "/login",
   account: "/account",
-  product: "/product",
   billing: "/account/billing",
   usage: "/account/usage"
 };
-const supportedRoutes = new Set(Object.values(fixedPaths));
+const supportedPlatformRoutes = new Set(Object.values(fixedPlatformPaths));
+const workspacePattern = /^\/([a-z0-9]+(?:-[a-z0-9]+)*)$/;
+const reservedWorkspaceSegments = new Set(["account", "api", "auth", "login", "_next"]);
 
 function assertKeys(value, allowed, label) {
   if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
@@ -28,13 +29,23 @@ function assertPath(value, label) {
   if (typeof value !== "string" || !internalPathPattern.test(value)) throw new TypeError(`${label} must be a safe internal path`);
 }
 
-function assertLinks(value, label) {
+export function productWorkspaceSegment(value) {
+  const match = typeof value === "string" ? value.match(workspacePattern) : null;
+  if (!match || reservedWorkspaceSegments.has(match[1])) throw new TypeError("paths.product must be one safe, non-reserved top-level workspace path");
+  return match[1];
+}
+
+function isConfiguredRoute(value, productPath) {
+  return supportedPlatformRoutes.has(value) || value === productPath || value.startsWith(`${productPath}/`);
+}
+
+function assertLinks(value, label, productPath) {
   if (!Array.isArray(value) || value.length > 8) throw new TypeError(`${label} must contain at most 8 links`);
   for (const [index, link] of value.entries()) {
     assertKeys(link, ["label", "href"], `${label}[${index}]`);
     assertText(link.label, `${label}[${index}].label`, 48);
     assertPath(link.href, `${label}[${index}].href`);
-    if (!supportedRoutes.has(link.href)) throw new TypeError(`${label}[${index}].href must reference a generated route`);
+    if (!isConfiguredRoute(link.href, productPath)) throw new TypeError(`${label}[${index}].href must reference a platform route or the configured product workspace`);
   }
 }
 
@@ -53,14 +64,15 @@ export function validateProductConfig(config) {
   assertKeys(config.paths, pathKeys, "paths");
   for (const key of pathKeys) {
     assertPath(config.paths[key], `paths.${key}`);
-    if (config.paths[key] !== fixedPaths[key]) throw new TypeError(`paths.${key} is structural and must remain ${fixedPaths[key]}`);
+    if (key !== "product" && config.paths[key] !== fixedPlatformPaths[key]) throw new TypeError(`paths.${key} is structural and must remain ${fixedPlatformPaths[key]}`);
   }
+  productWorkspaceSegment(config.paths.product);
 
   assertKeys(config.home, ["eyebrow", "title", "description", "primaryAction", "primaryHref", "secondaryAction", "secondaryHref"], "home");
   for (const key of ["eyebrow", "title", "description", "primaryAction", "secondaryAction"]) assertText(config.home[key], `home.${key}`);
   assertPath(config.home.primaryHref, "home.primaryHref");
   assertPath(config.home.secondaryHref, "home.secondaryHref");
-  if (!supportedRoutes.has(config.home.primaryHref) || !supportedRoutes.has(config.home.secondaryHref)) throw new TypeError("home actions must reference generated routes");
+  if (!isConfiguredRoute(config.home.primaryHref, config.paths.product) || !isConfiguredRoute(config.home.secondaryHref, config.paths.product)) throw new TypeError("home actions must reference a platform route or the configured product workspace");
   for (const block of ["login", "account"]) {
     assertKeys(config[block], ["title", "description"], block);
     assertText(config[block].title, `${block}.title`, 120);
@@ -70,8 +82,8 @@ export function validateProductConfig(config) {
   assertKeys(config.capabilities, ["analytics", "payment", "ai"], "capabilities");
   const allowed = { analytics: ["disabled", "external"], payment: ["disabled", "sandbox", "external"], ai: ["disabled", "mock", "external"] };
   for (const [key, modes] of Object.entries(allowed)) if (!modes.includes(config.capabilities[key])) throw new TypeError(`capabilities.${key} must be one of ${modes.join(" | ")}`);
-  assertLinks(config.navigation, "navigation");
-  assertLinks(config.footerLinks, "footerLinks");
+  assertLinks(config.navigation, "navigation", config.paths.product);
+  assertLinks(config.footerLinks, "footerLinks", config.paths.product);
   assertKeys(config.localized, ["en-US", "zh-CN"], "localized");
   for (const locale of ["en-US", "zh-CN"]) {
     const copy = config.localized[locale];
@@ -84,8 +96,8 @@ export function validateProductConfig(config) {
       assertText(copy[block].title, `localized.${locale}.${block}.title`, 120);
       assertText(copy[block].description, `localized.${locale}.${block}.description`);
     }
-    assertLinks(copy.navigation.map((item, index) => ({ label: item.label, href: config.navigation[index]?.href })), `localized.${locale}.navigation`);
-    assertLinks(copy.footerLinks.map((item, index) => ({ label: item.label, href: config.footerLinks[index]?.href })), `localized.${locale}.footerLinks`);
+    assertLinks(copy.navigation.map((item, index) => ({ label: item.label, href: config.navigation[index]?.href })), `localized.${locale}.navigation`, config.paths.product);
+    assertLinks(copy.footerLinks.map((item, index) => ({ label: item.label, href: config.footerLinks[index]?.href })), `localized.${locale}.footerLinks`, config.paths.product);
     if (copy.navigation.length !== config.navigation.length || copy.footerLinks.length !== config.footerLinks.length) throw new TypeError(`localized.${locale} link labels must match the configured link counts`);
   }
   if (!Object.hasOwn(config.localized, config.identity.locale)) throw new TypeError("identity.locale must have localized copy");

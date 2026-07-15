@@ -1,10 +1,10 @@
 {
   "$schema": "./manifest.schema.json",
   "schemaVersion": 1,
-  "manifestVersion": "1.0.0",
-  "generatorVersion": "1.0.0",
+  "manifestVersion": "1.1.0",
+  "generatorVersion": "1.1.0",
   "noticesInventoryVersion": "1.0.0",
-  "candidateVersion": "0.2.0-candidate.4",
+  "candidateVersion": "0.2.0-candidate.10",
   "sourcePackageVersion": "0.1.1",
   "source": {
     "repository": "https://github.com/gnemux/ai-web-starter-kit.git",
@@ -30,7 +30,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -47,7 +47,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -64,7 +64,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -81,7 +81,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -98,14 +98,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/.editorconfig",
       "target": ".editorconfig",
       "classification": "keep",
-      "owner": "template-platform",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -115,14 +115,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/.env.example",
       "target": ".env.example",
       "classification": "keep",
-      "owner": "template-platform",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -132,14 +132,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/.github/pull_request_template.md",
       "target": ".github/pull_request_template.md",
       "classification": "keep",
-      "owner": "engineering",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -149,14 +149,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/.github/workflows/ci.yml",
       "target": ".github/workflows/ci.yml",
       "classification": "keep",
-      "owner": "engineering",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -166,14 +166,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/.gitignore",
       "target": ".gitignore",
       "classification": "keep",
-      "owner": "template-platform",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -183,14 +183,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
       "source": "template/blueprint/AGENTS.md",
       "target": "AGENTS.md",
       "classification": "keep",
-      "owner": "engineering",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -200,15 +200,15 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "template/blueprint/LICENSE",
-      "target": "LICENSE",
+      "source": "template/blueprint/apps/web/app/(product)/product/page.tsx",
+      "target": "apps/web/app/(product)/product/page.tsx",
       "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
+      "owner": "product",
+      "productEditable": true,
       "action": "copy",
       "verification": [
         "inventory",
@@ -217,14 +217,14 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "template/blueprint/README.md",
-      "target": "README.md",
+      "source": "template/blueprint/apps/web/app/account/account-sign-out.tsx",
+      "target": "apps/web/app/account/account-sign-out.tsx",
       "classification": "keep",
-      "owner": "template-platform",
+      "owner": "platform-app",
       "productEditable": false,
       "action": "copy",
       "verification": [
@@ -234,24 +234,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/THIRD_PARTY_NOTICES.md",
-      "target": "THIRD_PARTY_NOTICES.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -268,7 +251,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -285,7 +268,24 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/account/profile-form.tsx",
+      "target": "apps/web/app/account/profile-form.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -302,7 +302,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -319,7 +319,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -336,7 +336,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -353,7 +353,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -370,7 +370,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -387,7 +387,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -404,7 +404,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -421,7 +421,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -438,12 +438,12 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "template/blueprint/apps/web/app/product/page.tsx",
-      "target": "apps/web/app/product/page.tsx",
+      "source": "template/blueprint/apps/web/components/language-switcher.tsx",
+      "target": "apps/web/components/language-switcher.tsx",
       "classification": "keep",
       "owner": "platform-app",
       "productEditable": false,
@@ -455,7 +455,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -472,7 +472,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -489,1576 +489,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/instrumentation-client.ts",
-      "target": "apps/web/instrumentation-client.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/analytics/client.ts",
-      "target": "apps/web/modules/platform/analytics/client.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/analytics/properties.ts",
-      "target": "apps/web/modules/platform/analytics/properties.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/ai/mock.ts",
-      "target": "apps/web/modules/platform/ai/mock.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/payment/sandbox.ts",
-      "target": "apps/web/modules/platform/payment/sandbox.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/safe-adapters.test.mjs",
-      "target": "apps/web/modules/platform/safe-adapters.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/auth/auth-contract.test.mjs",
-      "target": "apps/web/modules/platform/auth/auth-contract.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/auth/actions.ts",
-      "target": "apps/web/modules/platform/auth/actions.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/auth/auth-submit-button.tsx",
-      "target": "apps/web/modules/platform/auth/auth-submit-button.tsx",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/auth/confirmation-url.ts",
-      "target": "apps/web/modules/platform/auth/confirmation-url.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/auth/current-account.ts",
-      "target": "apps/web/modules/platform/auth/current-account.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/navigation/internal-return.test.mjs",
-      "target": "apps/web/modules/platform/navigation/internal-return.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/navigation/internal-return.ts",
-      "target": "apps/web/modules/platform/navigation/internal-return.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/performance/cache-key.test.mjs",
-      "target": "apps/web/modules/platform/performance/cache-key.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/performance/cache-key.ts",
-      "target": "apps/web/modules/platform/performance/cache-key.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/performance/cache.ts",
-      "target": "apps/web/modules/platform/performance/cache.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/supabase/config.ts",
-      "target": "apps/web/modules/platform/supabase/config.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/supabase/proxy.ts",
-      "target": "apps/web/modules/platform/supabase/proxy.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/supabase/server.ts",
-      "target": "apps/web/modules/platform/supabase/server.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/product/product-workspace.tsx",
-      "target": "apps/web/modules/product/product-workspace.tsx",
-      "classification": "keep",
-      "owner": "product",
-      "productEditable": true,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/next-env.d.ts",
-      "target": "apps/web/next-env.d.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/next.config.ts",
-      "target": "apps/web/next.config.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/package.json",
-      "target": "apps/web/package.json",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/postcss.config.mjs",
-      "target": "apps/web/postcss.config.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/middleware.ts",
-      "target": "apps/web/middleware.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/tailwind.config.ts",
-      "target": "apps/web/tailwind.config.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/tsconfig.json",
-      "target": "apps/web/tsconfig.json",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/vercel.json",
-      "target": "apps/web/vercel.json",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/context/codex-rules.md",
-      "target": "context/codex-rules.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/context/performance.md",
-      "target": "context/performance.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/context/project.md",
-      "target": "context/project.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/context/status.md",
-      "target": "context/status.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/integrations/README.md",
-      "target": "integrations/README.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/package.json",
-      "target": "package.json",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/package.json",
-      "target": "packages/core/package.json",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/ai.ts",
-      "target": "packages/core/src/ai.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/auth.ts",
-      "target": "packages/core/src/auth.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/billing.ts",
-      "target": "packages/core/src/billing.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/core.test.ts",
-      "target": "packages/core/src/core.test.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/index.ts",
-      "target": "packages/core/src/index.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/payment.ts",
-      "target": "packages/core/src/payment.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/src/providers.ts",
-      "target": "packages/core/src/providers.ts",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/core/tsconfig.json",
-      "target": "packages/core/tsconfig.json",
-      "classification": "keep",
-      "owner": "package-core",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/db/package.json",
-      "target": "packages/db/package.json",
-      "classification": "keep",
-      "owner": "package-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/db/src/index.ts",
-      "target": "packages/db/src/index.ts",
-      "classification": "keep",
-      "owner": "package-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/db/src/db.test.mjs",
-      "target": "packages/db/src/db.test.mjs",
-      "classification": "keep",
-      "owner": "package-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/db/tsconfig.json",
-      "target": "packages/db/tsconfig.json",
-      "classification": "keep",
-      "owner": "package-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/platform/package.json",
-      "target": "packages/platform/package.json",
-      "classification": "keep",
-      "owner": "package-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/platform/src/index.ts",
-      "target": "packages/platform/src/index.ts",
-      "classification": "keep",
-      "owner": "package-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/platform/src/platform.test.mjs",
-      "target": "packages/platform/src/platform.test.mjs",
-      "classification": "keep",
-      "owner": "package-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/platform/tsconfig.json",
-      "target": "packages/platform/tsconfig.json",
-      "classification": "keep",
-      "owner": "package-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/package.json",
-      "target": "packages/ui/package.json",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/src/index.tsx",
-      "target": "packages/ui/src/index.tsx",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/src/dialog.tsx",
-      "target": "packages/ui/src/dialog.tsx",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/tsconfig.json",
-      "target": "packages/ui/tsconfig.json",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/pnpm-lock.yaml",
-      "target": "pnpm-lock.yaml",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/pnpm-workspace.yaml",
-      "target": "pnpm-workspace.yaml",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/playwright.config.ts",
-      "target": "playwright.config.ts",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "browser-test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/product-config.mjs",
-      "target": "scripts/product-config.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/env-init.mjs",
-      "target": "scripts/env-init.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/env-init.test.mjs",
-      "target": "scripts/env-init.test.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/lint-source.mjs",
-      "target": "scripts/lint-source.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "negative-fixture"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/product-init.mjs",
-      "target": "scripts/product-init.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/product-init-lib.mjs",
-      "target": "scripts/product-init-lib.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/verify-boundaries.mjs",
-      "target": "scripts/verify-boundaries.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/verify-candidate.mjs",
-      "target": "scripts/verify-candidate.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/verify-product.mjs",
-      "target": "scripts/verify-product.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/verify-release.mjs",
-      "target": "scripts/verify-release.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/verify-security.mjs",
-      "target": "scripts/verify-security.mjs",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/specs/_template/acceptance.md",
-      "target": "specs/_template/acceptance.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/specs/_template/engineering-spec.md",
-      "target": "specs/_template/engineering-spec.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/specs/_template/product-spec.md",
-      "target": "specs/_template/product-spec.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/specs/_template/test-plan.md",
-      "target": "specs/_template/test-plan.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/specs/collaboration/agent-orchestration.md",
-      "target": "specs/collaboration/agent-orchestration.md",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/supabase/.gitignore",
-      "target": "supabase/.gitignore",
-      "classification": "keep",
-      "owner": "platform-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/supabase/README.md",
-      "target": "supabase/README.md",
-      "classification": "keep",
-      "owner": "platform-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/supabase/migrations/20260713155439_foundation_baseline.sql",
-      "target": "supabase/migrations/20260713155439_foundation_baseline.sql",
-      "classification": "keep",
-      "owner": "platform-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/supabase/seed.sql",
-      "target": "supabase/seed.sql",
-      "classification": "keep",
-      "owner": "platform-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/supabase/tests/foundation.sql",
-      "target": "supabase/tests/foundation.sql",
-      "classification": "keep",
-      "owner": "platform-db",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/app/account/profile-form.tsx",
-      "target": "apps/web/app/account/profile-form.tsx",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/components/language-switcher.tsx",
-      "target": "apps/web/components/language-switcher.tsx",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/i18n/locale.ts",
-      "target": "apps/web/modules/platform/i18n/locale.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/i18n/messages.ts",
-      "target": "apps/web/modules/platform/i18n/messages.ts",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/profile-flow.test.mjs",
-      "target": "apps/web/modules/platform/profile-flow.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/apps/web/modules/platform/analytics/dynamic-client.test.mjs",
-      "target": "apps/web/modules/platform/analytics/dynamic-client.test.mjs",
-      "classification": "keep",
-      "owner": "platform-app",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/src/styles.css",
-      "target": "packages/ui/src/styles.css",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/src/toast.tsx",
-      "target": "packages/ui/src/toast.tsx",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/packages/ui/src/ui-contract.test.mjs",
-      "target": "packages/ui/src/ui-contract.test.mjs",
-      "classification": "keep",
-      "owner": "package-ui",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/tests/product/template-smoke.spec.ts",
-      "target": "tests/product/template-smoke.spec.ts",
-      "classification": "keep",
-      "owner": "product",
-      "productEditable": true,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan",
-        "browser-test"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/tsconfig.base.json",
-      "target": "tsconfig.base.json",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
-      }
-    },
-    {
-      "source": "template/blueprint/turbo.json",
-      "target": "turbo.json",
-      "classification": "keep",
-      "owner": "template-platform",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -2075,57 +506,1146 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "config:product",
-      "target": "supabase/config.toml",
-      "classification": "transform",
-      "owner": "platform-db",
+      "source": "template/blueprint/apps/web/instrumentation-client.ts",
+      "target": "apps/web/instrumentation-client.ts",
+      "classification": "keep",
+      "owner": "platform-app",
       "productEditable": false,
-      "action": "generate",
+      "action": "copy",
       "verification": [
-        "neutral-project",
-        "isolated-ports",
-        "no-cloud-id"
+        "inventory",
+        "checksum",
+        "pollution-scan"
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "manifest:self",
-      "target": "template-manifest.json",
-      "classification": "transform",
-      "owner": "template-platform",
+      "source": "template/blueprint/apps/web/middleware.ts",
+      "target": "apps/web/middleware.ts",
+      "classification": "keep",
+      "owner": "platform-app",
       "productEditable": false,
-      "action": "generate",
+      "action": "copy",
       "verification": [
-        "manifest-hash",
-        "artifact-inventory"
+        "inventory",
+        "checksum",
+        "pollution-scan"
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
-      "source": "config:product",
-      "target": "product.config.json",
-      "classification": "transform",
+      "source": "template/blueprint/apps/web/modules/platform/ai/mock.ts",
+      "target": "apps/web/modules/platform/ai/mock.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/analytics/client.ts",
+      "target": "apps/web/modules/platform/analytics/client.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/analytics/dynamic-client.test.mjs",
+      "target": "apps/web/modules/platform/analytics/dynamic-client.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/analytics/properties.ts",
+      "target": "apps/web/modules/platform/analytics/properties.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/actions.ts",
+      "target": "apps/web/modules/platform/auth/actions.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/auth-contract.test.mjs",
+      "target": "apps/web/modules/platform/auth/auth-contract.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/auth-submit-button.tsx",
+      "target": "apps/web/modules/platform/auth/auth-submit-button.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/confirmation-url.ts",
+      "target": "apps/web/modules/platform/auth/confirmation-url.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/current-account.ts",
+      "target": "apps/web/modules/platform/auth/current-account.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/i18n/locale.ts",
+      "target": "apps/web/modules/platform/i18n/locale.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/i18n/messages.ts",
+      "target": "apps/web/modules/platform/i18n/messages.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/navigation/internal-return.test.mjs",
+      "target": "apps/web/modules/platform/navigation/internal-return.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/navigation/internal-return.ts",
+      "target": "apps/web/modules/platform/navigation/internal-return.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/payment/sandbox.ts",
+      "target": "apps/web/modules/platform/payment/sandbox.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/performance/cache-key.test.mjs",
+      "target": "apps/web/modules/platform/performance/cache-key.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/performance/cache-key.ts",
+      "target": "apps/web/modules/platform/performance/cache-key.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/performance/cache.ts",
+      "target": "apps/web/modules/platform/performance/cache.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/profile-flow.test.mjs",
+      "target": "apps/web/modules/platform/profile-flow.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/safe-adapters.test.mjs",
+      "target": "apps/web/modules/platform/safe-adapters.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/config.ts",
+      "target": "apps/web/modules/platform/supabase/config.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/proxy.ts",
+      "target": "apps/web/modules/platform/supabase/proxy.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/server.ts",
+      "target": "apps/web/modules/platform/supabase/server.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/product/product-workspace.tsx",
+      "target": "apps/web/modules/product/product-workspace.tsx",
+      "classification": "keep",
       "owner": "product",
       "productEditable": true,
-      "action": "generate",
+      "action": "copy",
       "verification": [
-        "config-hash",
-        "schema",
-        "product-init"
+        "inventory",
+        "checksum",
+        "pollution-scan"
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/next-env.d.ts",
+      "target": "apps/web/next-env.d.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/next.config.ts",
+      "target": "apps/web/next.config.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/package.json",
+      "target": "apps/web/package.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/postcss.config.mjs",
+      "target": "apps/web/postcss.config.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/tailwind.config.ts",
+      "target": "apps/web/tailwind.config.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/tsconfig.json",
+      "target": "apps/web/tsconfig.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/vercel.json",
+      "target": "apps/web/vercel.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/context/codex-rules.md",
+      "target": "context/codex-rules.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/context/performance.md",
+      "target": "context/performance.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/context/project.md",
+      "target": "context/project.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/context/status.md",
+      "target": "context/status.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/integrations/README.md",
+      "target": "integrations/README.md",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/LICENSE",
+      "target": "LICENSE",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/package.json",
+      "target": "package.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/package.json",
+      "target": "packages/core/package.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/ai.ts",
+      "target": "packages/core/src/ai.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/auth.ts",
+      "target": "packages/core/src/auth.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/billing.ts",
+      "target": "packages/core/src/billing.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/core.test.ts",
+      "target": "packages/core/src/core.test.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/index.ts",
+      "target": "packages/core/src/index.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/payment.ts",
+      "target": "packages/core/src/payment.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/src/providers.ts",
+      "target": "packages/core/src/providers.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/core/tsconfig.json",
+      "target": "packages/core/tsconfig.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/db/package.json",
+      "target": "packages/db/package.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/db/src/db.test.mjs",
+      "target": "packages/db/src/db.test.mjs",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/db/src/index.ts",
+      "target": "packages/db/src/index.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/db/tsconfig.json",
+      "target": "packages/db/tsconfig.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/platform/package.json",
+      "target": "packages/platform/package.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/platform/src/index.ts",
+      "target": "packages/platform/src/index.ts",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/platform/src/platform.test.mjs",
+      "target": "packages/platform/src/platform.test.mjs",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/platform/tsconfig.json",
+      "target": "packages/platform/tsconfig.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/package.json",
+      "target": "packages/ui/package.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/dialog.tsx",
+      "target": "packages/ui/src/dialog.tsx",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/icons.tsx",
+      "target": "packages/ui/src/icons.tsx",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/index.tsx",
+      "target": "packages/ui/src/index.tsx",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/styles.css",
+      "target": "packages/ui/src/styles.css",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/toast.tsx",
+      "target": "packages/ui/src/toast.tsx",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/src/ui-contract.test.mjs",
+      "target": "packages/ui/src/ui-contract.test.mjs",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/packages/ui/tsconfig.json",
+      "target": "packages/ui/tsconfig.json",
+      "classification": "keep",
+      "owner": "platform-package",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/playwright.config.ts",
+      "target": "playwright.config.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/pnpm-lock.yaml",
+      "target": "pnpm-lock.yaml",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/pnpm-workspace.yaml",
+      "target": "pnpm-workspace.yaml",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -2142,7 +1662,482 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "config:product",
+      "target": "product.config.json",
+      "classification": "transform",
+      "owner": "product",
+      "productEditable": true,
+      "action": "generate",
+      "verification": [
+        "config-hash",
+        "schema",
+        "product-init"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/README.md",
+      "target": "README.md",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/env-init.mjs",
+      "target": "scripts/env-init.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/env-init.test.mjs",
+      "target": "scripts/env-init.test.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/lint-source.mjs",
+      "target": "scripts/lint-source.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/product-config.mjs",
+      "target": "scripts/product-config.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/product-init-lib.mjs",
+      "target": "scripts/product-init-lib.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/product-init.mjs",
+      "target": "scripts/product-init.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/product-route-boundary.mjs",
+      "target": "scripts/product-route-boundary.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/test-foundation-db.mjs",
+      "target": "scripts/test-foundation-db.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/product-route-boundary.test.mjs",
+      "target": "scripts/product-route-boundary.test.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/verify-boundaries.mjs",
+      "target": "scripts/verify-boundaries.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/verify-candidate.mjs",
+      "target": "scripts/verify-candidate.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/verify-product.mjs",
+      "target": "scripts/verify-product.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/verify-release.mjs",
+      "target": "scripts/verify-release.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/verify-security.mjs",
+      "target": "scripts/verify-security.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/specs/_template/acceptance.md",
+      "target": "specs/_template/acceptance.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/specs/_template/engineering-spec.md",
+      "target": "specs/_template/engineering-spec.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/specs/_template/product-spec.md",
+      "target": "specs/_template/product-spec.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/specs/_template/test-plan.md",
+      "target": "specs/_template/test-plan.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/specs/collaboration/agent-orchestration.md",
+      "target": "specs/collaboration/agent-orchestration.md",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/.gitignore",
+      "target": "supabase/.gitignore",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "config:product",
+      "target": "supabase/config.toml",
+      "classification": "transform",
+      "owner": "platform-db",
+      "productEditable": false,
+      "action": "generate",
+      "verification": [
+        "neutral-project",
+        "isolated-ports",
+        "no-cloud-id"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/migrations/20260713155439_foundation_baseline.sql",
+      "target": "supabase/migrations/20260713155439_foundation_baseline.sql",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/README.md",
+      "target": "supabase/README.md",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/seed.sql",
+      "target": "supabase/seed.sql",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/tests/foundation_test.sql",
+      "target": "supabase/tests/foundation_test.sql",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "manifest:self",
+      "target": "template-manifest.json",
+      "classification": "transform",
+      "owner": "template-platform",
+      "productEditable": false,
+      "action": "generate",
+      "verification": [
+        "manifest-hash",
+        "artifact-inventory"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -2158,7 +2153,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
       }
     },
     {
@@ -2174,7 +2169,92 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.4"
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/tests/foundation/template-smoke.spec.ts",
+      "target": "tests/foundation/template-smoke.spec.ts",
+      "classification": "keep",
+      "owner": "verification",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/tests/product/README.md",
+      "target": "tests/product/README.md",
+      "classification": "keep",
+      "owner": "product",
+      "productEditable": true,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/THIRD_PARTY_NOTICES.md",
+      "target": "THIRD_PARTY_NOTICES.md",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/tsconfig.base.json",
+      "target": "tsconfig.base.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
+      }
+    },
+    {
+      "source": "template/blueprint/turbo.json",
+      "target": "turbo.json",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.10"
       }
     }
   ],
@@ -2186,6 +2266,7 @@
   ],
   "productExtensions": {
     "editableRoots": [
+      "apps/web/app/(product)/",
       "apps/web/modules/product/",
       "apps/web/public/product/",
       "specs/product/",
@@ -2205,25 +2286,25 @@
     {
       "name": "@xwlc/core",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/ui",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/platform",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     },
     {
       "name": "@xwlc/db",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.4",
+      "candidateVersion": "0.2.0-candidate.10",
       "decision": "transform"
     }
   ]

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FormField, Input, Notice, PageHeader, Tabs } from "@xwlc/ui";
+import { FormField, Input, NavTabs, Notice, PageHeader } from "@xwlc/ui";
 import { productConfig } from "@/config/product.config";
 import { requestPasswordReset, signIn, signUp } from "@/modules/platform/auth/actions";
 import { normalizeInternalReturn } from "@/modules/platform/navigation/internal-return";
@@ -34,11 +34,11 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
 
   return <div className="page narrow">
     <PageHeader title={title} description={description} />
-    <Tabs label={messages.authModeLabel}>
+    <NavTabs label={messages.authModeLabel}>
       <Link aria-current={mode === "signin" ? "page" : undefined} href={modeHref("signin")}>{messages.signInMode}</Link>
       <Link aria-current={mode === "signup" ? "page" : undefined} href={modeHref("signup")}>{messages.signUpMode}</Link>
       <Link aria-current={mode === "reset" ? "page" : undefined} href={modeHref("reset")}>{messages.resetMode}</Link>
-    </Tabs>
+    </NavTabs>
     {!account.configured ? <Notice variant="warning">{messages.authUnavailable}</Notice> : null}
     {params.error && account.configured ? <Notice variant="error">{errorMessages[params.error] ?? messages.authRejected}</Notice> : null}
     {message ? <Notice variant="success">{message}</Notice> : null}

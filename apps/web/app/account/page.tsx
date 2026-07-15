@@ -2,9 +2,10 @@ import { redirect } from "next/navigation";
 import { Button, Card, FormField, Input, Notice, PageHeader, StatePanel } from "@xwlc/ui";
 import { productConfig } from "@/config/product.config";
 import { getCurrentAccount } from "@/modules/platform/auth/current-account";
-import { signOut, updatePassword } from "@/modules/platform/auth/actions";
+import { updatePassword } from "@/modules/platform/auth/actions";
 import { getLocalizedProduct } from "@/modules/platform/i18n/locale";
 import { ProfileForm } from "./profile-form";
+import { AccountSignOut } from "./account-sign-out";
 
 export const dynamic = "force-dynamic";
 
@@ -29,8 +30,8 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
     <PageHeader title={copy.account.title} description={copy.account.description} />
     {params.message === "password_updated" ? <Notice variant="success">{messages.passwordUpdated}</Notice> : null}
     <Card><p className="eyebrow">{messages.signedIn}</p><h2>{account.user.email ?? copy.account.title}</h2>
-      <ProfileForm initialName={account.profile?.display_name ?? ""} labels={{ displayName: messages.displayName, displayNameHint: messages.displayNameHint, save: messages.saveProfile, saving: messages.saving, success: messages.profileSaved, error: messages.profileFailed }} />
-      <form action={signOut} className="form"><Button variant="secondary" type="submit">{messages.signOut}</Button></form>
+      <ProfileForm initialName={account.profile?.display_name ?? ""} labels={{ displayName: messages.displayName, displayNameHint: messages.displayNameHint, save: messages.saveProfile, saving: messages.saving, success: messages.profileSaved, error: messages.profileFailed, dismiss: messages.dismissNotification }} />
+      <div className="form"><AccountSignOut labels={{ cancel: messages.cancel, closeDialog: messages.closeDialog, confirm: messages.confirmSignOut, description: messages.confirmSignOutDescription, signOut: messages.signOut, title: messages.confirmSignOutTitle }} /></div>
     </Card>
   </div>;
 }

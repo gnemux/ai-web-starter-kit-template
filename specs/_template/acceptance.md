@@ -7,6 +7,8 @@
 - frozen install, lint, typecheck, unit/contract tests and production build;
 - disposable local database reset and pgTAP result;
 - desktop and mobile `pnpm test:browser` result;
+- protected `tests/foundation` result plus any product-owned
+  `tests/product` journeys;
 - real local page review using only the generated candidate.
 
 ## Security and data checks
