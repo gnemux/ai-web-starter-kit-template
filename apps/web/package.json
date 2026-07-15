@@ -1,0 +1,34 @@
+{
+  "name": "@xwlc/web",
+  "version": "0.2.0-candidate.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test modules/platform/navigation/internal-return.test.mjs modules/platform/performance/cache-key.test.mjs modules/platform/auth/auth-contract.test.mjs modules/platform/analytics/dynamic-client.test.mjs modules/platform/profile-flow.test.mjs modules/platform/safe-adapters.test.mjs config/product-config.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.0",
+    "@supabase/supabase-js": "2.108.2",
+    "@xwlc/core": "workspace:*",
+    "@xwlc/db": "workspace:*",
+    "@xwlc/platform": "workspace:*",
+    "@xwlc/ui": "workspace:*",
+    "next": "15.5.19",
+    "posthog-js": "1.390.2",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.21",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "10.5.0",
+    "postcss": "8.5.15",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3"
+  }
+}

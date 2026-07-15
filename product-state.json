@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "pristine",
+  "baseCandidateVersion": "0.2.0-candidate.4",
+  "configHash": "840c7bf301401f36d1c56af4d000f384f8e07135a8c7985ee6fa84bdf1a6008d",
+  "identity": {
+    "id": "starter-product",
+    "name": "Starter Product",
+    "eventNamespace": "starter_product",
+    "releaseVersion": "0.1.0"
+  }
+}

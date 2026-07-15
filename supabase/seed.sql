@@ -1,0 +1,1 @@
+-- Intentionally empty. Product seed data must be deterministic and non-sensitive.

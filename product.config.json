@@ -1,0 +1,137 @@
+{
+  "identity": {
+    "id": "starter-product",
+    "name": "Starter Product",
+    "mark": "SP",
+    "tagline": "A focused starting point for your next product.",
+    "locale": "en-US",
+    "eventNamespace": "starter_product",
+    "releaseVersion": "0.1.0"
+  },
+  "paths": {
+    "home": "/",
+    "login": "/login",
+    "account": "/account",
+    "product": "/product",
+    "billing": "/account/billing",
+    "usage": "/account/usage"
+  },
+  "home": {
+    "eyebrow": "Reusable product foundation",
+    "title": "Start with the platform work already solved.",
+    "description": "Authentication, account, capability gates and operational defaults are ready for a real product boundary.",
+    "primaryAction": "Open product",
+    "primaryHref": "/product",
+    "secondaryAction": "View account",
+    "secondaryHref": "/account"
+  },
+  "login": {
+    "title": "Welcome back",
+    "description": "Sign in to continue to your product workspace."
+  },
+  "account": {
+    "title": "Account",
+    "description": "Manage your profile and product capabilities."
+  },
+  "capabilities": {
+    "analytics": "disabled",
+    "payment": "disabled",
+    "ai": "disabled"
+  },
+  "navigation": [
+    {
+      "label": "Product",
+      "href": "/product"
+    },
+    {
+      "label": "Account",
+      "href": "/account"
+    }
+  ],
+  "footerLinks": [
+    {
+      "label": "Billing",
+      "href": "/account/billing"
+    },
+    {
+      "label": "Usage",
+      "href": "/account/usage"
+    }
+  ],
+  "localized": {
+    "en-US": {
+      "tagline": "A focused starting point for your next product.",
+      "home": {
+        "eyebrow": "Reusable product foundation",
+        "title": "Start with the platform work already solved.",
+        "description": "Authentication, account, capability gates and operational defaults are ready for a real product boundary.",
+        "primaryAction": "Open product",
+        "secondaryAction": "View account"
+      },
+      "login": {
+        "title": "Welcome back",
+        "description": "Sign in to continue to your product workspace."
+      },
+      "account": {
+        "title": "Account",
+        "description": "Manage your profile and product capabilities."
+      },
+      "navigation": [
+        {
+          "label": "Product"
+        },
+        {
+          "label": "Account"
+        }
+      ],
+      "footerLinks": [
+        {
+          "label": "Billing"
+        },
+        {
+          "label": "Usage"
+        }
+      ]
+    },
+    "zh-CN": {
+      "tagline": "为你的下一个产品提供可靠起点。",
+      "home": {
+        "eyebrow": "可复用产品底座",
+        "title": "从已经解决的平台能力开始。",
+        "description": "登录、账户、能力门禁和工程默认值已经就绪，可以直接进入真实产品边界。",
+        "primaryAction": "进入产品",
+        "secondaryAction": "查看账户"
+      },
+      "login": {
+        "title": "欢迎回来",
+        "description": "登录后继续进入产品工作区。"
+      },
+      "account": {
+        "title": "账户",
+        "description": "管理个人资料和产品能力。"
+      },
+      "navigation": [
+        {
+          "label": "产品"
+        },
+        {
+          "label": "账户"
+        }
+      ],
+      "footerLinks": [
+        {
+          "label": "计费"
+        },
+        {
+          "label": "用量"
+        }
+      ]
+    }
+  },
+  "theme": {
+    "accent": "#315c4f",
+    "accentSoft": "#dfece7",
+    "surface": "#f6f4ef",
+    "ink": "#17201d"
+  }
+}

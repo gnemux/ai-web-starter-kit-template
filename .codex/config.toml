@@ -1,0 +1,23 @@
+[agents]
+max_threads = 6
+max_depth = 1
+
+[agents.sol]
+description = "Root orchestrator and default writer"
+config_file = "agents/sol.toml"
+
+[agents.terra]
+description = "Judgment-heavy bounded implementation"
+config_file = "agents/terra.toml"
+
+[agents.luna]
+description = "Deterministic mechanical execution"
+config_file = "agents/luna.toml"
+
+[agents.terra_reviewer]
+description = "Independent read-only risk reviewer"
+config_file = "agents/terra-reviewer.toml"
+
+[features.multi_agent_v2]
+hide_spawn_agent_metadata = false
+tool_namespace = "agents"

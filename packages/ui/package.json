@@ -1,0 +1,10 @@
+{
+  "name": "@xwlc/ui",
+  "version": "0.2.0-candidate.4",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.tsx", "./styles.css": "./src/styles.css" },
+  "scripts": { "lint": "tsc --noEmit", "typecheck": "tsc --noEmit", "test": "node --test src/ui-contract.test.mjs" },
+  "dependencies": { "react": "19.2.7" },
+  "devDependencies": { "@types/react": "19.2.17", "typescript": "5.9.3" }
+}

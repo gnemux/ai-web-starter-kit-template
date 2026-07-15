@@ -1,0 +1,10 @@
+{
+  "name": "@xwlc/platform",
+  "version": "0.2.0-candidate.4",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@xwlc/core": "workspace:*" },
+  "scripts": { "lint": "tsc --noEmit", "typecheck": "tsc --noEmit", "test": "node --experimental-strip-types --test src/platform.test.mjs" },
+  "devDependencies": { "typescript": "5.9.3" }
+}

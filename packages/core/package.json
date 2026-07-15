@@ -1,0 +1,13 @@
+{
+  "name": "@xwlc/core",
+  "version": "0.2.0-candidate.4",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/*.test.ts"
+  },
+  "devDependencies": { "@types/node": "22.19.21", "tsx": "4.21.0", "typescript": "5.9.3" }
+}

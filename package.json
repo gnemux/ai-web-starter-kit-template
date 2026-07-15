@@ -1,0 +1,29 @@
+{
+  "name": "generated-product",
+  "version": "0.2.0-candidate.4",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "env:init": "node scripts/env-init.mjs",
+    "build": "turbo build",
+    "lint": "node scripts/lint-source.mjs && turbo lint",
+    "typecheck": "turbo typecheck",
+    "product:init": "node scripts/product-init.mjs",
+    "product:verify": "node scripts/verify-product.mjs",
+    "test:boundaries": "node scripts/verify-boundaries.mjs",
+    "test:package-boundaries": "pnpm test:boundaries",
+    "test:release": "node scripts/verify-release.mjs",
+    "test:release-boundaries": "pnpm test:release",
+    "test:security": "node scripts/verify-security.mjs",
+    "test:environment": "node --test scripts/env-init.test.mjs",
+    "test:browser": "playwright test",
+    "template:verify": "pnpm product:verify && pnpm test:boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && pnpm --filter @xwlc/web test && node scripts/verify-candidate.mjs",
+    "test": "pnpm product:verify && pnpm test:boundaries && pnpm test:release && pnpm test:security && pnpm test:environment && turbo test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "turbo": "2.9.18",
+    "typescript": "5.9.3"
+  }
+}

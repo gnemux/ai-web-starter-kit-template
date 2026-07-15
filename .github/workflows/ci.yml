@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Activate pnpm
+        run: corepack enable && corepack prepare pnpm@9.15.0 --activate
+      - name: Install
+        run: pnpm install --frozen-lockfile
+      - name: Verify
+        run: pnpm lint && pnpm typecheck && pnpm test && pnpm build
+      - name: Verify candidate integrity
+        run: pnpm template:verify
+
+  database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: 2.107.0
+      - name: Rebuild disposable database
+        run: supabase start && supabase db reset
+      - name: Run pgTAP security and retention tests
+        run: supabase test db
+      - name: Stop disposable database
+        if: always()
+        run: supabase stop --no-backup
+
+  browser-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Activate pnpm
+        run: corepack enable && corepack prepare pnpm@9.15.0 --activate
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+        with:
+          version: 2.107.0
+      - name: Install locked dependencies and Chromium
+        run: pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps chromium
+      - name: Start isolated foundation and configure public local values
+        run: supabase start && supabase db reset && pnpm env:init -- --supabase-local
+      - name: Run reusable product browser smoke
+        run: pnpm test:browser
+      - name: Stop disposable database
+        if: always()
+        run: supabase stop --no-backup
