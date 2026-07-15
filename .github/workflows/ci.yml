@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-          cache: pnpm
       - name: Activate pnpm
         run: corepack enable && corepack prepare pnpm@9.15.0 --activate
       - name: Install
@@ -51,7 +50,6 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-          cache: pnpm
       - name: Activate pnpm
         run: corepack enable && corepack prepare pnpm@9.15.0 --activate
       - name: Setup Supabase CLI

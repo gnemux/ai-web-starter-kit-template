@@ -3,8 +3,8 @@
   "candidateVersion": "0.2.0-candidate.4",
   "source": {
     "repository": "https://github.com/gnemux/ai-web-starter-kit.git",
-    "commit": "4c2ce19a1038d2642df3a3166aadbfc2bff2edfd",
-    "committedAt": "2026-07-15T18:28:59+08:00",
+    "commit": "bce5ba53acd4cb85c81713fe19a4c86fbaecc431",
+    "committedAt": "2026-07-15T19:07:02+08:00",
     "packageVersion": "0.1.1"
   },
   "generator": {
@@ -47,10 +47,10 @@
   },
   "hashes": {
     "manifest": "8304d37a7a81e9839fc75eb1125fae51b66c17e56671d2223c41c5b17477b889",
-    "blueprint": "529fab38252edf51185fc72a4d8658ff2f07452170a8dc8489a1c438a3cc6828",
+    "blueprint": "90825f67a2ebe1ff67cd5331de831a3e8ee5fd76725420b05193ee3f95effae2",
     "config": "840c7bf301401f36d1c56af4d000f384f8e07135a8c7985ee6fa84bdf1a6008d",
     "candidateLock": "64331d7a7f0ebb6a1b8feb8570414740d40899a22bbf5c78ec86e68eccd9c189",
-    "protectedContent": "1d25c57d0d242d5bdf4eefd732a8d81d8d82987dd7edcfa8a20b293edc94d65b"
+    "protectedContent": "0ef6988dc14fecd6c8e9920aee6c418052baea518b8e201c4e170d2f8aed1fb5"
   },
   "toolchain": {
     "node": "22",
