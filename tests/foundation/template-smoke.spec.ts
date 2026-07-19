@@ -12,6 +12,15 @@ test("anonymous product entry preserves its safe return path", async ({ page }) 
   await expect(page.getByRole("heading", { name: configuredProduct.login.title })).toBeVisible();
 });
 
+test("recovery and optional social login fail safely without provider configuration", async ({ page }) => {
+  await page.goto(`/login?next=${encodedProductPath}`);
+  await expect(page.getByRole("button", { name: "Continue with Google" })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Continue with Apple" })).toBeDisabled();
+  await page.goto(`/auth/recovery?next=${encodedProductPath}#token_hash=invalid&type=recovery`);
+  await expect(page.getByText("This reset link is invalid, expired or already used.")).toBeVisible();
+  await expect(page).toHaveURL(`/auth/recovery?next=${encodedProductPath}`);
+});
+
 test("an invalid persisted local session recovers as anonymous", async ({ context, page }) => {
   const staleSession = {
     access_token: "expired.local.session",

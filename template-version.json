@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "candidateVersion": "0.2.0-candidate.10",
+  "candidateVersion": "0.2.0-candidate.11",
   "source": {
     "repository": "https://github.com/gnemux/ai-web-starter-kit.git",
-    "commit": "0433c4d39787549bd00a10cd2d22f89252cf9a85",
-    "committedAt": "2026-07-15T23:01:52+08:00",
+    "commit": "c4fcaaa9d7018b157562efb0bfdc5e47f8efc41b",
+    "committedAt": "2026-07-18T23:24:19+08:00",
     "packageVersion": "0.1.1"
   },
   "generator": {
-    "version": "1.1.0",
-    "manifestVersion": "1.1.0",
+    "version": "1.2.0",
+    "manifestVersion": "1.2.0",
     "schemaVersion": 1
   },
   "sourceProjection": {
     "file": "template/source-map.json",
-    "hash": "e6c58d9b3e7132b739cd7e1d3820773d9ba00b09acd8ce0f117b4235d1fd97d0"
+    "hash": "0ad6952b5b103e13cffc17d95aa9e1116dff03a7c21cce65c0a40da87279909b"
   },
   "foundation": {
     "migrationFile": "supabase/migrations/20260713155439_foundation_baseline.sql",
@@ -47,11 +47,11 @@
     ]
   },
   "hashes": {
-    "manifest": "16e00afd0a99171532ce8273a6f7dc0fd8d206c6d94241f3d431f99a2143a680",
-    "blueprint": "283b8e13527ecaaebdc2b439e05aa25c2c212efad16948230e712ee27e1e69bd",
+    "manifest": "6b9dcaf7c6553546970f86ffb5983fd8b87e007b90ca16d2b90f91236dcdf499",
+    "blueprint": "81955b8aaf0752271f1476538e37e450a8ac42ef0de170cae53ad9eee478859f",
     "config": "840c7bf301401f36d1c56af4d000f384f8e07135a8c7985ee6fa84bdf1a6008d",
     "candidateLock": "64331d7a7f0ebb6a1b8feb8570414740d40899a22bbf5c78ec86e68eccd9c189",
-    "protectedContent": "d620c515fed4790e75b4075cfeab9c8d892cdd4fcd368565ceec52846751d79b"
+    "protectedContent": "eba26a4237d8343630a7096c6c979e95009dd38420aef0d5b9a7ed637ca6e80b"
   },
   "toolchain": {
     "node": "22",
@@ -62,25 +62,25 @@
     {
       "name": "@xwlc/core",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/ui",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/platform",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/db",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     }
   ]

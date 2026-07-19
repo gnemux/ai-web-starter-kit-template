@@ -6,10 +6,11 @@ import { normalizeInternalReturn } from "@/modules/platform/navigation/internal-
 import { getCurrentAccount } from "@/modules/platform/auth/current-account";
 import { getLocalizedProduct } from "@/modules/platform/i18n/locale";
 import { AuthSubmitButton } from "@/modules/platform/auth/auth-submit-button";
+import { OAuthOptions } from "./oauth-options";
 
 type LoginMode = "signin" | "signup" | "reset";
 
-export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string; mode?: string; error?: string; message?: string }> }) {
+export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string; mode?: string; error?: string; message?: string; oauth_error?: string }> }) {
   const params = await searchParams;
   const account = await getCurrentAccount();
   const { messages, copy } = await getLocalizedProduct();
@@ -42,7 +43,16 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
     {!account.configured ? <Notice variant="warning">{messages.authUnavailable}</Notice> : null}
     {params.error && account.configured ? <Notice variant="error">{errorMessages[params.error] ?? messages.authRejected}</Notice> : null}
     {message ? <Notice variant="success">{message}</Notice> : null}
+    {mode !== "reset" ? <OAuthOptions configured={account.configured} error={params.oauth_error} next={next} labels={{
+      apple: messages.continueWithApple,
+      appleDeferred: messages.appleDeferred,
+      google: messages.continueWithGoogle,
+      checking: messages.checkingSocialSignIn,
+      unavailable: messages.socialSignInUnavailable,
+      working: messages.openingGoogle
+    }} /> : null}
     {mode === "reset" ? <form action={requestPasswordReset} className="card form" aria-disabled={!account.configured}>
+      <input type="hidden" name="next" value={next} />
       <FormField id="reset-email" label={messages.email}><Input name="email" type="email" autoComplete="email" required disabled={!account.configured} /></FormField>
       <AuthSubmitButton disabled={!account.configured} label={messages.resetPassword} pendingLabel={messages.sendingReset} />
       <Link className="text-link" href={modeHref("signin")}>{messages.backToSignIn}</Link>

@@ -1,10 +1,10 @@
 {
   "$schema": "./manifest.schema.json",
   "schemaVersion": 1,
-  "manifestVersion": "1.1.0",
-  "generatorVersion": "1.1.0",
+  "manifestVersion": "1.2.0",
+  "generatorVersion": "1.2.0",
   "noticesInventoryVersion": "1.0.0",
-  "candidateVersion": "0.2.0-candidate.10",
+  "candidateVersion": "0.2.0-candidate.11",
   "sourcePackageVersion": "0.1.1",
   "source": {
     "repository": "https://github.com/gnemux/ai-web-starter-kit.git",
@@ -30,7 +30,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -47,7 +47,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -64,7 +64,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -81,7 +81,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -98,7 +98,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -115,7 +115,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -132,7 +132,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -149,7 +149,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -166,7 +166,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -183,7 +183,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -200,7 +200,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -217,7 +217,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -234,7 +234,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -251,7 +251,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -268,7 +268,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -285,7 +285,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -302,7 +302,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -319,7 +319,109 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/oauth/callback/route.ts",
+      "target": "apps/web/app/auth/oauth/callback/route.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/oauth/start/route.ts",
+      "target": "apps/web/app/auth/oauth/start/route.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/recovery/page.tsx",
+      "target": "apps/web/app/auth/recovery/page.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/recovery/password/page.tsx",
+      "target": "apps/web/app/auth/recovery/password/page.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/recovery/password/recovered-password-form.tsx",
+      "target": "apps/web/app/auth/recovery/password/recovered-password-form.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/auth/recovery/recovery-confirmation.tsx",
+      "target": "apps/web/app/auth/recovery/recovery-confirmation.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -336,7 +438,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -353,7 +455,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -370,7 +472,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -387,7 +489,24 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/app/login/oauth-options.tsx",
+      "target": "apps/web/app/login/oauth-options.tsx",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -404,7 +523,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -421,7 +540,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -438,7 +557,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -455,7 +574,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -472,7 +591,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -489,7 +608,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -506,7 +625,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -523,7 +642,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -540,7 +659,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -557,7 +676,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -574,7 +693,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -591,7 +710,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -608,7 +727,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -625,7 +744,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -642,7 +761,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -659,7 +778,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -676,7 +795,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -693,7 +812,92 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/oauth-provider-settings.ts",
+      "target": "apps/web/modules/platform/auth/oauth-provider-settings.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/oauth.test.mjs",
+      "target": "apps/web/modules/platform/auth/oauth.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/oauth.ts",
+      "target": "apps/web/modules/platform/auth/oauth.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/password-recovery.test.mjs",
+      "target": "apps/web/modules/platform/auth/password-recovery.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/auth/password-recovery.ts",
+      "target": "apps/web/modules/platform/auth/password-recovery.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -710,7 +914,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -727,7 +931,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -744,7 +948,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -761,7 +965,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -778,7 +982,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -795,7 +999,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -812,7 +1016,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -829,7 +1033,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -846,7 +1050,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -863,7 +1067,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -880,7 +1084,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -897,7 +1101,58 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/route-cookie-state.test.mjs",
+      "target": "apps/web/modules/platform/supabase/route-cookie-state.test.mjs",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/route-cookie-state.ts",
+      "target": "apps/web/modules/platform/supabase/route-cookie-state.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/apps/web/modules/platform/supabase/route.ts",
+      "target": "apps/web/modules/platform/supabase/route.ts",
+      "classification": "keep",
+      "owner": "platform-app",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -914,7 +1169,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -931,7 +1186,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -948,7 +1203,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -965,7 +1220,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -982,7 +1237,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -999,7 +1254,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1016,7 +1271,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1033,7 +1288,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1050,7 +1305,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1067,7 +1322,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1084,7 +1339,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1101,7 +1356,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1118,7 +1373,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1135,7 +1390,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1152,7 +1407,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1169,7 +1424,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1186,7 +1441,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1203,7 +1458,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1220,7 +1475,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1237,7 +1492,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1254,7 +1509,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1271,7 +1526,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1288,7 +1543,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1305,7 +1560,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1322,7 +1577,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1339,7 +1594,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1356,7 +1611,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1373,7 +1628,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1390,7 +1645,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1407,7 +1662,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1424,7 +1679,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1441,7 +1696,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1458,7 +1713,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1475,7 +1730,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1492,7 +1747,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1509,7 +1764,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1526,7 +1781,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1543,7 +1798,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1560,7 +1815,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1577,7 +1832,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1594,7 +1849,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1611,7 +1866,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1628,7 +1883,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1645,7 +1900,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1662,7 +1917,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1679,7 +1934,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1696,7 +1951,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1713,7 +1968,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1730,7 +1985,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1747,7 +2002,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1764,7 +2019,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1781,7 +2036,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1798,7 +2053,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1815,24 +2070,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
-      }
-    },
-    {
-      "source": "template/blueprint/scripts/test-foundation-db.mjs",
-      "target": "scripts/test-foundation-db.mjs",
-      "classification": "keep",
-      "owner": "engineering",
-      "productEditable": false,
-      "action": "copy",
-      "verification": [
-        "inventory",
-        "checksum",
-        "pollution-scan"
-      ],
-      "provenance": {
-        "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1849,7 +2087,24 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/scripts/test-foundation-db.mjs",
+      "target": "scripts/test-foundation-db.mjs",
+      "classification": "keep",
+      "owner": "engineering",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1866,7 +2121,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1883,7 +2138,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1900,7 +2155,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1917,7 +2172,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1934,7 +2189,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1951,7 +2206,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1968,7 +2223,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -1985,7 +2240,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2002,7 +2257,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2019,7 +2274,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2036,7 +2291,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2053,7 +2308,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2070,7 +2325,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2087,7 +2342,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2104,7 +2359,24 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
+      }
+    },
+    {
+      "source": "template/blueprint/supabase/templates/recovery.html",
+      "target": "supabase/templates/recovery.html",
+      "classification": "keep",
+      "owner": "database",
+      "productEditable": false,
+      "action": "copy",
+      "verification": [
+        "inventory",
+        "checksum",
+        "pollution-scan"
+      ],
+      "provenance": {
+        "sourceCommit": "git:HEAD",
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2121,7 +2393,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2137,7 +2409,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2153,7 +2425,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2169,7 +2441,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2186,7 +2458,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2203,7 +2475,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2220,7 +2492,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2237,7 +2509,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     },
     {
@@ -2254,7 +2526,7 @@
       ],
       "provenance": {
         "sourceCommit": "git:HEAD",
-        "templateVersion": "0.2.0-candidate.10"
+        "templateVersion": "0.2.0-candidate.11"
       }
     }
   ],
@@ -2286,25 +2558,25 @@
     {
       "name": "@xwlc/core",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/ui",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/platform",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     },
     {
       "name": "@xwlc/db",
       "sourceVersion": "0.1.1",
-      "candidateVersion": "0.2.0-candidate.10",
+      "candidateVersion": "0.2.0-candidate.11",
       "decision": "transform"
     }
   ]

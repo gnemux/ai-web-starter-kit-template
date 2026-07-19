@@ -5,7 +5,8 @@ import { productConfig } from "@/config/product.config";
 import { normalizeInternalReturn } from "../navigation/internal-return";
 import { createOptionalServerClient } from "../supabase/server";
 import { invalidateOwnerFact } from "../performance/cache";
-import { buildEmailConfirmationUrl } from "./confirmation-url";
+import { buildEmailConfirmationUrl, buildPasswordRecoveryUrl, getAuthAppUrl } from "./confirmation-url";
+import { normalizeRecoveryEmail, normalizeRecoveryNext, normalizeRecoveryTokenHash, validateRecoveredPassword } from "./password-recovery";
 
 type LoginMode = "signin" | "signup" | "reset";
 function loginLocation(input: { mode?: LoginMode; next?: string; error?: string; message?: string } = {}) {
@@ -40,7 +41,7 @@ export async function signUp(formData: FormData) {
   const next = normalizeInternalReturn(String(formData.get("next") ?? ""), productConfig.paths.product);
   if (!email || password.length < 8 || password !== confirmPassword) redirect(loginLocation({ mode: "signup", next, error: "invalid_signup" }));
   let emailRedirectTo: string;
-  try { emailRedirectTo = buildEmailConfirmationUrl(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000", next); }
+  try { emailRedirectTo = buildEmailConfirmationUrl(getAuthAppUrl(), next); }
   catch { redirect(loginLocation({ mode: "signup", next, error: "invalid_app_url" })); }
   const { data, error } = await client.auth.signUp({ email, password, options: { emailRedirectTo } });
   if (error) redirect(loginLocation({ mode: "signup", next, error: "signup_failed" }));
@@ -52,14 +53,45 @@ export async function signUp(formData: FormData) {
 export async function requestPasswordReset(formData: FormData) {
   const client = await createOptionalServerClient();
   if (!client) redirect(loginLocation({ mode: "reset", error: "not_configured" }));
-  const email = String(formData.get("email") ?? "").trim();
-  if (!email) redirect(loginLocation({ mode: "reset", error: "reset_failed" }));
+  const email = normalizeRecoveryEmail(formData.get("email"));
+  const next = normalizeRecoveryNext(formData.get("next"), productConfig.paths.product);
+  if (!email) redirect(loginLocation({ mode: "reset", next, error: "reset_failed" }));
   let redirectTo: string;
-  try { redirectTo = buildEmailConfirmationUrl(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000", `${productConfig.paths.account}?mode=update-password`); }
-  catch { redirect(loginLocation({ mode: "reset", error: "reset_failed" })); }
+  try { redirectTo = buildPasswordRecoveryUrl(getAuthAppUrl(), next); }
+  catch { redirect(loginLocation({ mode: "reset", next, error: "reset_failed" })); }
   const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo });
-  if (error) redirect(loginLocation({ mode: "reset", error: "reset_failed" }));
-  redirect(loginLocation({ mode: "reset", message: "reset_requested" }));
+  if (error) redirect(loginLocation({ mode: "reset", next, error: "reset_failed" }));
+  redirect(loginLocation({ mode: "reset", next, message: "reset_requested" }));
+}
+
+export type RecoveryContinuationState = { ok: false; error: "invalid_recovery" } | null;
+
+export async function continuePasswordRecovery(_state: RecoveryContinuationState, formData: FormData): Promise<RecoveryContinuationState> {
+  const client = await createOptionalServerClient();
+  const tokenHash = normalizeRecoveryTokenHash(formData.get("tokenHash"));
+  const next = normalizeRecoveryNext(formData.get("next"), productConfig.paths.product);
+  if (!client || !tokenHash) return { ok: false, error: "invalid_recovery" };
+  const { error } = await client.auth.verifyOtp({ token_hash: tokenHash, type: "recovery" });
+  if (error) return { ok: false, error: "invalid_recovery" };
+  redirect(`/auth/recovery/password?next=${encodeURIComponent(next)}`);
+}
+
+export type RecoveredPasswordState =
+  | { ok: false; error: "password_invalid" | "password_mismatch" | "password_update_failed" }
+  | { ok: true; next: string }
+  | null;
+
+export async function updateRecoveredPassword(_state: RecoveredPasswordState, formData: FormData): Promise<RecoveredPasswordState> {
+  const input = validateRecoveredPassword(formData.get("password"), formData.get("confirmPassword"));
+  if (!input.ok) return input;
+  const client = await createOptionalServerClient();
+  if (!client) return { ok: false, error: "password_update_failed" };
+  const { data, error: userError } = await client.auth.getUser();
+  if (userError || !data.user) return { ok: false, error: "password_update_failed" };
+  const { error } = await client.auth.updateUser({ password: input.password });
+  if (error) return { ok: false, error: "password_update_failed" };
+  revalidatePath(productConfig.paths.account);
+  return { ok: true, next: normalizeRecoveryNext(formData.get("next"), productConfig.paths.product) };
 }
 
 export async function updatePassword(formData: FormData) {
@@ -84,7 +116,8 @@ export async function updateProfile(_previous: ProfileActionState, formData: For
   const { data, error } = await client.auth.getUser();
   if (error || !data.user) return { status: "error", message: "not_authenticated" };
   const displayName = String(formData.get("displayName") ?? "").trim();
-  if (displayName.length > 120) return { status: "error", message: "invalid_profile" };
+  const requiresDisplayName = formData.get("requireDisplayName") === "1";
+  if (displayName.length > 120 || (requiresDisplayName && !displayName)) return { status: "error", message: "invalid_profile" };
   const { error: profileError } = await client.from("user_profiles").upsert({ id: data.user.id, display_name: displayName || null }, { onConflict: "id" });
   if (profileError) return { status: "error", message: "profile_update_failed" };
   invalidateOwnerFact("account_profile", data.user.id);

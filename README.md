@@ -11,6 +11,13 @@ This repository is a generated, single-product starting point. It contains one d
 5. Run `pnpm --filter @xwlc/web dev` and review `/`, `/login`, `/account`, `/account/billing`, `/account/usage`, and the configured `paths.product`.
 6. For the reusable production-mode browser regression, install its pinned Chromium once with `pnpm exec playwright install chromium`, keep local Supabase running, and run `pnpm test:browser`. The protected foundation suite always runs; product tests under `tests/product` are optional until a real product journey exists.
 
+The local Supabase configuration includes a scanner-safe recovery email
+template. Open the local Inbucket message yourself, continue through the
+confirmation page, and then set the password in the protected recovery session.
+Google login is optional: it remains disabled until the product owner enables
+Google in that product's Supabase project and allowlists the deployed callback.
+Apple is intentionally disabled until a separate Apple Developer rollout.
+
 ## Customize safely
 
 Keep one untouched generated copy as the candidate evidence. In the new product repository, edit `product.config.json`, then run `pnpm product:init`. To import a separate config, run `pnpm product:init -- --config /path/product.json`; replacing an already-derived identity requires `--force`. Initialization atomically updates the four generated config/state files and, when `paths.product` changes, moves the complete editable product route subtree to that safe workspace root. It refuses reserved paths and existing destinations. Run `pnpm product:verify` and `pnpm template:verify` afterwards.
