@@ -12,5 +12,9 @@ nav, .header-actions, .footer-actions { display: flex; flex-wrap: wrap; align-it
 .narrow .page-header h1 { font-size: clamp(2rem, 5vw, 3.6rem); }
 .hero { display: grid; grid-template-columns: 1.3fr .7fr; gap: clamp(32px, 7vw, 88px); align-items: center; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.oauth-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 24px 0; padding: 20px; box-shadow: none; }
+.oauth-options .notice, .oauth-options .oauth-help { grid-column: 1 / -1; margin: 0; }
+.oauth-help { color: color-mix(in srgb, var(--ink) 62%, transparent); font-size: .9rem; }
+.sensitive-auth-page { isolation: isolate; }
 .workspace-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-@media (max-width: 760px) { .hero, .workspace-grid { grid-template-columns: 1fr; } .site-header, footer { align-items: flex-start; flex-direction: column; } .page { padding: 56px 0; } }
+@media (max-width: 760px) { .hero, .workspace-grid, .oauth-options { grid-template-columns: 1fr; } .site-header, footer { align-items: flex-start; flex-direction: column; } .page { padding: 56px 0; } }

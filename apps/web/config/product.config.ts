@@ -137,5 +137,5 @@ export const productConfig = {
   }
 } as const;
 export const templateMetadata = {
-  "templateVersion": "0.2.0-candidate.10"
+  "templateVersion": "0.2.0-candidate.11"
 } as const;

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFile } from "node:fs/promises";
-import { buildEmailConfirmationUrl } from "./confirmation-url.ts";
+import { buildEmailConfirmationUrl, buildPasswordRecoveryUrl, getAuthAppUrl } from "./confirmation-url.ts";
 import { normalizeInternalReturn } from "../navigation/internal-return.ts";
 
 test("auth surface separates sign in, sign up, reset and profile update", async () => {
@@ -30,12 +30,25 @@ test("signup confirmation uses the trusted app origin and a safe local return", 
   assert.equal(callback.pathname, "/auth/confirm");
   assert.equal(callback.searchParams.get("next"), "/product");
   assert.throws(() => buildEmailConfirmationUrl("javascript:alert(1)", "/product"), /Invalid app origin/);
+  const previous = { app: process.env.NEXT_PUBLIC_APP_URL, env: process.env.NEXT_PUBLIC_APP_ENV };
+  process.env.NEXT_PUBLIC_APP_URL = "http://localhost:3000";
+  process.env.NEXT_PUBLIC_APP_ENV = "production";
+  assert.throws(() => getAuthAppUrl(), /public app origin/);
+  if (previous.app === undefined) delete process.env.NEXT_PUBLIC_APP_URL; else process.env.NEXT_PUBLIC_APP_URL = previous.app;
+  if (previous.env === undefined) delete process.env.NEXT_PUBLIC_APP_ENV; else process.env.NEXT_PUBLIC_APP_ENV = previous.env;
 });
 
-test("password recovery returns only to the protected password form", () => {
-  const callback = new URL(buildEmailConfirmationUrl("http://localhost:3000", "/account?mode=update-password"));
-  assert.equal(callback.pathname, "/auth/confirm");
-  assert.equal(callback.searchParams.get("next"), "/account?mode=update-password");
+test("password recovery uses a scanner-safe interstitial before the protected password form", async () => {
+  const callback = new URL(buildPasswordRecoveryUrl("http://localhost:3000", "/product"));
+  assert.equal(callback.pathname, "/auth/recovery");
+  assert.equal(callback.searchParams.get("next"), "/product");
+  const confirmation = await readFile(new URL("../../../app/auth/recovery/recovery-confirmation.tsx", import.meta.url), "utf8");
+  const actions = await readFile(new URL("./actions.ts", import.meta.url), "utf8");
+  const passwordPage = await readFile(new URL("../../../app/auth/recovery/password/page.tsx", import.meta.url), "utf8");
+  assert.match(confirmation, /window\.history\.replaceState/);
+  assert.match(confirmation, /type === "recovery"/);
+  assert.match(actions, /continuePasswordRecovery/);
+  assert.match(passwordPage, /!account\.configured \|\| !account\.user/);
 });
 
 test("local Supabase allowlist matches generated confirmation callbacks", async () => {
@@ -44,7 +57,32 @@ test("local Supabase allowlist matches generated confirmation callbacks", async 
     const callback = `${origin}/auth/confirm`;
     assert.ok(config.includes(`"${callback}**"`));
     assert.ok(buildEmailConfirmationUrl(origin, "/product").startsWith(`${callback}?next=`));
+    assert.ok(config.includes(`"${origin}/auth/recovery**"`));
+    assert.ok(config.includes(`"${origin}/auth/oauth/callback**"`));
   }
+});
+
+test("recovery routes never initialize product analytics", async () => {
+  const instrumentation = await readFile(new URL("../../../instrumentation-client.ts", import.meta.url), "utf8");
+  assert.match(instrumentation, /!window\.location\.pathname\.startsWith\("\/auth\/recovery"\)/);
+});
+
+test("optional Google OAuth replaces a previous local session and Apple stays deferred", async () => {
+  const start = await readFile(new URL("../../../app/auth/oauth/start/route.ts", import.meta.url), "utf8");
+  const callback = await readFile(new URL("../../../app/auth/oauth/callback/route.ts", import.meta.url), "utf8");
+  const controls = await readFile(new URL("../../../app/login/oauth-options.tsx", import.meta.url), "utf8");
+  assert.match(start, /getSession\(\)/);
+  assert.match(start, /signOut\(\{ scope: "local" \}\)/);
+  assert.match(start, /skipBrowserRedirect: true/);
+  assert.match(callback, /exchangeCodeForSession/);
+  assert.match(callback, /identity\.provider === provider/);
+  assert.match(callback, /profile\.needsProfile/);
+  assert.match(callback, /buildProfileCompletionPath/);
+  assert.match(callback, /routeClient\.applyToResponse/);
+  assert.match(await readFile(new URL("./current-account.ts", import.meta.url), "utf8"), /invalidateOwnerFact\("account_profile", userId\)/);
+  assert.match(start, /function authJson[\s\S]*private, no-store/);
+  assert.doesNotMatch(start, /catch \{ return NextResponse\.json/);
+  assert.match(controls, /disabled title=\{labels\.appleDeferred\}/);
 });
 
 test("confirmation exchange keeps cookies and forbids caching", async () => {
